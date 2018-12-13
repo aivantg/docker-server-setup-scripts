@@ -1,0 +1,21 @@
+[user]
+	name = aivantg
+	email = aivant.developer@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit -m
+	st = status
+	last = log -1 HEAD
+	cia = commit -a -m
+	ciap = commit -a -m  && git push
+	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	acp = cmp
+        ac = "!f() { git add -A && git commit -m \"$@\"; }; f"
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
+[push]
+	default = current
+[core]
+	editor = nano
